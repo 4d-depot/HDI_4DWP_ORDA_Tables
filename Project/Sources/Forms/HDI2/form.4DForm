@@ -1,0 +1,333 @@
+{
+	"destination": "detailScreen",
+	"windowMinWidth": 1200,
+	"windowMaxWidth": 32000,
+	"windowMinHeight": 620,
+	"windowMaxHeight": 32000,
+	"width": 1200,
+	"height": 860,
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad",
+		"onTimer",
+		"onPageChange"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "A4",
+		"paperWidth": "842pt",
+		"paperHeight": "595pt"
+	},
+	"pages": [
+		{
+			"objects": {
+				"Tabs": {
+					"type": "tab",
+					"top": 20,
+					"left": 20,
+					"width": 1160,
+					"height": 820,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"dataSource": "Form:C1466.tabControl",
+					"dataSourceTypeHint": "object",
+					"action": "gotoPage",
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Tabs.4dm"
+				},
+				"Line": {
+					"type": "line",
+					"top": 0,
+					"left": 600,
+					"width": 1,
+					"height": 860,
+					"visibility": "hidden",
+					"stroke": "#da70d6",
+					"strokeDashArray": [
+						6,
+						2
+					]
+				}
+			}
+		},
+		{
+			"objects": {
+				"WParea2": {
+					"type": "write",
+					"top": 80,
+					"left": 140,
+					"width": 920,
+					"height": 720,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"dataSource": "WParea1",
+					"enterable": false,
+					"focusable": false,
+					"hideFocusRing": true,
+					"scrollbarVertical": "automatic",
+					"scrollbarHorizontal": "automatic",
+					"showSelection": true,
+					"showHorizontalRuler": false,
+					"showVerticalRuler": false,
+					"layoutMode": "embedded",
+					"borderStyle": "none",
+					"events": []
+				}
+			}
+		},
+		{
+			"objects": {
+				"btnTrace": {
+					"type": "checkbox",
+					"text": "Trace code",
+					"top": 810,
+					"left": 1030,
+					"width": 120,
+					"height": 20,
+					"events": [
+						"onClick"
+					],
+					"dataSource": "Form:C1466.trace",
+					"sizingX": "move",
+					"sizingY": "move",
+					"enterable": true,
+					"focusable": false
+				},
+				"Static Picture1": {
+					"type": "picture",
+					"top": 954,
+					"left": 995,
+					"width": 50,
+					"height": 50,
+					"picture": "/RESOURCES/Images/new.png",
+					"pictureFormat": "scaled",
+					"sizingX": "move"
+				},
+				"WParea1": {
+					"type": "write",
+					"top": 80,
+					"left": 60,
+					"width": 1070,
+					"height": 180,
+					"sizingX": "grow",
+					"sizingY": "fixed",
+					"dataSource": "WParea1",
+					"enterable": false,
+					"focusable": false,
+					"hideFocusRing": true,
+					"scrollbarVertical": "automatic",
+					"scrollbarHorizontal": "automatic",
+					"showSelection": true,
+					"showHorizontalRuler": false,
+					"showVerticalRuler": false,
+					"layoutMode": "embedded",
+					"borderStyle": "none",
+					"events": []
+				},
+				"WPmailing": {
+					"type": "write",
+					"top": 280,
+					"left": 40,
+					"width": 740,
+					"height": 480,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"dataSource": "WParea2",
+					"enterable": true,
+					"focusable": true,
+					"hideFocusRing": true,
+					"scrollbarVertical": "automatic",
+					"scrollbarHorizontal": "automatic",
+					"showSelection": true,
+					"showHorizontalRuler": false,
+					"showVerticalRuler": false,
+					"layoutMode": "page",
+					"borderStyle": "none",
+					"events": []
+				},
+				"LB": {
+					"type": "listbox",
+					"left": 800,
+					"top": 280,
+					"width": 350,
+					"height": 440,
+					"events": [
+						"onSelectionChange"
+					],
+					"dataSource": "Form:C1466.companies",
+					"listboxType": "collection",
+					"verticalLineStroke": "transparent",
+					"currentItemSource": "Form:C1466.currentCompany",
+					"method": "ObjectMethods/LB.4dm",
+					"scrollbarHorizontal": "hidden",
+					"headerHeight": "21px",
+					"rowHeight": "20px",
+					"selectionMode": "single",
+					"sizingX": "move",
+					"sizingY": "grow",
+					"columns": [
+						{
+							"header": {
+								"text": "Name",
+								"name": "Header1"
+							},
+							"name": "Column1",
+							"footer": {
+								"name": "Footer1"
+							},
+							"dataSource": "This:C1470.name",
+							"width": 185
+						},
+						{
+							"header": {
+								"name": "Header2",
+								"text": "City"
+							},
+							"name": "Column2",
+							"footer": {
+								"name": "Footer2"
+							},
+							"dataSource": "This:C1470.city",
+							"width": 149
+						}
+					]
+				},
+				"btnHTML1": {
+					"type": "button",
+					"top": 810,
+					"left": 640,
+					"width": 140,
+					"height": 20,
+					"sizingY": "move",
+					"text": "Display values",
+					"focusable": false,
+					"method": "ObjectMethods/btnHTML1.4dm",
+					"events": [
+						"onClick"
+					],
+					"sizingX": "move"
+				},
+				"btnPDF1": {
+					"type": "button",
+					"top": 780,
+					"left": 640,
+					"width": 140,
+					"height": 20,
+					"sizingY": "move",
+					"text": "Display formulas",
+					"focusable": false,
+					"method": "ObjectMethods/btnPDF1.4dm",
+					"events": [
+						"onClick"
+					],
+					"sizingX": "move"
+				},
+				"btnHTML": {
+					"type": "button",
+					"top": 780,
+					"left": 40,
+					"width": 120,
+					"height": 20,
+					"sizingY": "move",
+					"text": "Export to HTML",
+					"focusable": false,
+					"method": "ObjectMethods/btnHTML.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"btnPDF": {
+					"type": "button",
+					"top": 780,
+					"left": 170,
+					"width": 120,
+					"height": 20,
+					"sizingY": "move",
+					"text": "Export to PDF",
+					"focusable": false,
+					"method": "ObjectMethods/btnPDF.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"btnSVG": {
+					"type": "button",
+					"top": 810,
+					"left": 40,
+					"width": 120,
+					"height": 20,
+					"sizingY": "move",
+					"text": "Export to SVG",
+					"focusable": false,
+					"method": "ObjectMethods/btnSVG.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"btnDOCX": {
+					"type": "button",
+					"top": 810,
+					"left": 170,
+					"width": 120,
+					"height": 20,
+					"sizingY": "move",
+					"text": "Export to Docx",
+					"focusable": false,
+					"method": "ObjectMethods/btnDOCX.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Check Box": {
+					"type": "checkbox",
+					"text": "Highlight formulas",
+					"top": 804,
+					"left": 413,
+					"width": 176,
+					"height": 26,
+					"events": [
+						"onClick"
+					],
+					"dataSource": "Form:C1466.highlight",
+					"method": "ObjectMethods/Check Box.4dm",
+					"sizingY": "move",
+					"sizingX": "move",
+					"focusable": false
+				},
+				"btnPDF2": {
+					"type": "button",
+					"top": 740,
+					"left": 800,
+					"width": 350,
+					"height": 20,
+					"sizingY": "move",
+					"text": "Print all companies",
+					"focusable": false,
+					"method": "ObjectMethods/btnPDF2.4dm",
+					"events": [
+						"onClick"
+					],
+					"sizingX": "move"
+				}
+			}
+		}
+	],
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	},
+	"geometryStamp": 4334,
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {}
+		}
+	},
+	"menuBar": "Menu Bar #1"
+}

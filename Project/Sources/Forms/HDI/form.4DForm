@@ -1,0 +1,263 @@
+﻿{
+	"destination": "detailScreen",
+	"windowSizingX": "fixed",
+	"windowSizingY": "fixed",
+	"width": 724,
+	"height": 560,
+	"menuBar": "Menu Bar #1",
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "A4",
+		"paperWidth": "595pt",
+		"paperHeight": "842pt"
+	},
+	"pages": [
+		{
+			"objects": {
+				"Rectangle1": {
+					"type": "rectangle",
+					"top": 0,
+					"left": 0,
+					"width": 724,
+					"height": 560,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"stroke": "transparent"
+				},
+				"Line": {
+					"type": "line",
+					"top": -12,
+					"left": 125,
+					"height": 649,
+					"visibility": "hidden",
+					"stroke": "#9400D3",
+					"strokeDashArray": "1 1"
+				},
+				"Rectangle": {
+					"type": "rectangle",
+					"top": 110,
+					"left": 0,
+					"width": 724,
+					"height": 364,
+					"fill": "#C0C0C0",
+					"stroke": "transparent"
+				}
+			}
+		},
+		{
+			"objects": {
+				"BtnDemo": {
+					"type": "button",
+					"top": 520,
+					"left": 614,
+					"width": 90,
+					"height": 20,
+					"action": "Accept",
+					"shortcutKey": "[Return]",
+					"text": "Demo",
+					"class": "default1",
+					"focusable": false,
+					"defaultButton": true,
+					"events": [
+						"onClick"
+					]
+				},
+				"Icon4D": {
+					"type": "picture",
+					"top": 24,
+					"left": 30,
+					"width": 64,
+					"height": 64,
+					"pictureFormat": "scaled",
+					"picture": "/RESOURCES/4D.png"
+				},
+				"Picture12": {
+					"type": "picture",
+					"top": 110,
+					"left": 0,
+					"width": 724,
+					"height": 364,
+					"pictureFormat": "scaled",
+					"picture": "/RESOURCES/Images/HDIabout.png"
+				},
+				"TxtVersion": {
+					"type": "text",
+					"top": 486,
+					"left": 130,
+					"width": 300,
+					"height": 17,
+					"stroke": "#696969",
+					"text": "{version} and above"
+				},
+				"labelVersion": {
+					"type": "text",
+					"top": 486,
+					"left": 20,
+					"width": 100,
+					"height": 17,
+					"stroke": "#212121",
+					"textAlign": "right",
+					"fontWeight": "bold",
+					"text": "Version:"
+				},
+				"labelBlog": {
+					"type": "text",
+					"top": 532,
+					"left": 20,
+					"width": 100,
+					"height": 17,
+					"stroke": "#212121",
+					"textAlign": "right",
+					"fontWeight": "bold",
+					"text": "Blog:"
+				},
+				"labelInfo": {
+					"type": "text",
+					"top": 509,
+					"left": 20,
+					"width": 100,
+					"height": 17,
+					"stroke": "#212121",
+					"textAlign": "right",
+					"fontWeight": "bold",
+					"text": "Info:"
+				},
+				"txtBlog": {
+					"type": "input",
+					"top": 532,
+					"left": 130,
+					"width": 300,
+					"height": 17,
+					"dataSource": "Form:C1466.blog",
+					"stroke": "#1E90FF",
+					"textDecoration": "underline",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "custom",
+					"method": "ObjectMethods/txtBlog.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"txtInfo": {
+					"type": "input",
+					"top": 509,
+					"left": 130,
+					"width": 300,
+					"height": 17,
+					"dataSource": "Form:C1466.info",
+					"stroke": "#696969",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onClick"
+					]
+				},
+				"Picture11": {
+					"type": "picture",
+					"top": 24,
+					"left": 130,
+					"width": 21,
+					"height": 35,
+					"pictureFormat": "scaled",
+					"picture": "Images/Picture11.png"
+				},
+				"txtTitle": {
+					"type": "text",
+					"top": 58,
+					"left": 160,
+					"width": 544,
+					"height": 50,
+					"stroke": "#212121",
+					"textAlign": "left",
+					"fontFamily": "System Font Regular",
+					"fontSize": 18,
+					"text": "• title •"
+				},
+				"Text": {
+					"type": "text",
+					"top": 20,
+					"left": 160,
+					"width": 544,
+					"height": 37,
+					"stroke": "#212121",
+					"textAlign": "left",
+					"fontFamily": "System Font Regular",
+					"fontSize": 30,
+					"text": "How do I…"
+				},
+				"White90": {
+					"type": "picture",
+					"top": 110,
+					"left": 0,
+					"width": 724,
+					"height": 364,
+					"visibility": "hidden",
+					"pictureFormat": "tiled",
+					"picture": "Images/White90.png"
+				},
+				"ErrorMainText": {
+					"type": "text",
+					"top": 198,
+					"left": 132,
+					"width": 460,
+					"height": 80,
+					"visibility": "hidden",
+					"textAlign": "center",
+					"fontTheme": "main",
+					"text": "Sorry, this \"How do I\" (HDI) example must\rbe used with a newer version of 4D\r({version} and above)"
+				},
+				"ErrorSubText": {
+					"type": "text",
+					"top": 306,
+					"left": 182,
+					"width": 360,
+					"height": 80,
+					"visibility": "hidden",
+					"textAlign": "center",
+					"text": "Do not attempt to open this HDI in design mode using this version; if you do so, forms and/or methods could be altered because of missing functionality."
+				}
+			}
+		}
+	],
+	"editor": {
+		"defaultView": "View 1",
+		"activeView": "View 2",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"BAD 4D VERSION": {
+				"objects": [
+					"White90",
+					"ErrorMainText",
+					"ErrorSubText"
+				]
+			},
+			"View 4": {
+				"objects": [
+					"labelVersion",
+					"labelBlog"
+				]
+			},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}

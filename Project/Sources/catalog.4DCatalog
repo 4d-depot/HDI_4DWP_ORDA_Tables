@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE base SYSTEM "http://www.4d.com/dtd/2007/base.dtd" >
+<base name="HDI_4DWP_ORDA_Tables" uuid="2D4F6103DC084198BFC0283C03D0A0B2" collation_locale="en">
+	<schema name="DEFAULT_SCHEMA"/>
+	<table name="Documents" uuid="5FFB6E4662E84076BB60B2CCF062C87D" id="1">
+		<field name="ID" uuid="CF01C76D9B944C3282BEF752A9145C75" type="4" unique="true" autosequence="true" not_null="true" id="1"/>
+		<field name="comments" uuid="5C95D504D9BF4F2DA28C82DB2076D1E1" type="21" never_null="true" id="2"/>
+		<field name="title" uuid="C1973FEF696F4CCFBB48F8C3B3108BAE" type="10" limiting_length="255" never_null="true" id="3"/>
+		<field name="pageNumber" uuid="ECB3E95C3CB54CC1A29680C775690D9B" type="4" never_null="true" id="4"/>
+		<field name="sample" uuid="0CE2D22343F94BD5B2CAA9590AA21AD6" type="21" blob_switch_size="2147483647" never_null="true" id="5"/>
+		<primary_key field_name="ID" field_uuid="CF01C76D9B944C3282BEF752A9145C75"/>
+		<table_extra input_form="Input1" output_form="Output">
+			<editor_table_info displayable_fields_count="5">
+				<color red="255" green="255" blue="255" alpha="0"/>
+				<coordinates left="28.52734375" top="0" width="120" height="164.3046875"/>
+			</editor_table_info>
+		</table_extra>
+	</table>
+	<table name="People" uuid="956263DEA0B14B5798C10CE492CD8874" id="3">
+		<field name="ID" uuid="FF2FCA7F712E44B39AC199EA8D20EB47" type="4" unique="true" autosequence="true" not_null="true" id="1">
+			<field_extra position="1"/>
+		</field>
+		<field name="lastname" uuid="71FE2285E1874313A7A94BCBB5B9ED4C" type="10" limiting_length="255" never_null="true" id="2">
+			<field_extra position="4"/>
+		</field>
+		<field name="city" uuid="D56838945DE140E28C1BE2DFAB7A64E5" type="10" limiting_length="255" never_null="true" id="3">
+			<field_extra position="5"/>
+		</field>
+		<field name="phone" uuid="CFC9AC8DC102499F98E9BAA351EBA499" type="10" limiting_length="255" never_null="true" id="4">
+			<field_extra position="6"/>
+		</field>
+		<field name="firstname" uuid="3E7257B3EE1941948D4324D06F8C6AC4" type="10" limiting_length="255" never_null="true" id="5">
+			<field_extra position="3"/>
+		</field>
+		<field name="address" uuid="CC4B44F08FFF44D99C6F2E4FA9049EEA" type="10" never_null="true" id="6">
+			<field_extra position="7"/>
+		</field>
+		<field name="zipCode" uuid="AFEE082BFDEA4D9EB0F87E498AEA4C57" type="10" limiting_length="255" never_null="true" id="7">
+			<field_extra position="8"/>
+		</field>
+		<field name="eMail" uuid="B40DF49132A84137BE3CB806FE6B8B00" type="10" limiting_length="255" never_null="true" id="8">
+			<field_extra position="9"/>
+		</field>
+		<field name="companyID" uuid="48BEA82CAE0742BDB3B55B476D97BC48" type="4" never_null="true" id="9">
+			<field_extra position="10"/>
+		</field>
+		<field name="title" uuid="48909E3D163C48C1AB9BF55E99359036" type="10" limiting_length="255" never_null="true" id="10">
+			<field_extra position="2"/>
+		</field>
+		<field name="salary" uuid="C429AD78D04D4B2CBA781E21B606BF26" type="6" never_null="true" id="11"/>
+		<primary_key field_name="ID" field_uuid="FF2FCA7F712E44B39AC199EA8D20EB47"/>
+		<table_extra output_form="list">
+			<editor_table_info displayable_fields_count="12">
+				<color red="255" green="255" blue="255" alpha="0"/>
+				<coordinates left="406.27899169922" top="20.771621704102" width="120" height="296.1484375"/>
+			</editor_table_info>
+		</table_extra>
+	</table>
+	<table name="Templates" uuid="26C4DA58B2ED432FA2796100B8AEA603" id="4">
+		<field name="ID" uuid="D7AB1689D6B34AC1B51F977CFAF41E47" type="4" unique="true" autosequence="true" not_null="true" id="1"/>
+		<field name="name" uuid="B187B8F833504451ABAF14C0E1A6BD08" type="10" limiting_length="255" never_null="true" id="2"/>
+		<field name="wp" uuid="DC3FF222895346C8886A5230A735D1BC" type="21" blob_switch_size="2147483647" never_null="true" id="3"/>
+		<primary_key field_name="ID" field_uuid="D7AB1689D6B34AC1B51F977CFAF41E47"/>
+		<table_extra input_form="In" output_form="out">
+			<editor_table_info displayable_fields_count="6">
+				<color red="255" green="255" blue="255" alpha="0"/>
+				<coordinates left="221.9453125" top="0" width="120" height="167.33203125"/>
+			</editor_table_info>
+		</table_extra>
+	</table>
+	<table name="Company" uuid="CC2E277C6A8F440C85DF8FFDF0C39210" id="5">
+		<field name="ID" uuid="97205C53CA04456BB7F61FD8B58605C2" type="4" unique="true" autosequence="true" not_null="true" id="1"/>
+		<field name="name" uuid="47A54A140B134A0EBC2FD4333B1C4373" type="10" limiting_length="255" never_null="true" id="2"/>
+		<field name="address" uuid="5C7D6C644FEF4706807C690D935ED049" type="10" never_null="true" id="3"/>
+		<field name="city" uuid="4DF2F51BBC3E40BC92A0C9BF24D8CB27" type="10" limiting_length="255" never_null="true" id="4"/>
+		<field name="phone" uuid="8B9907F7CD6A474F8C6046D234774730" type="10" limiting_length="255" never_null="true" id="5"/>
+		<field name="zipCode" uuid="8FCD451542634D44910707F71FADF20B" type="10" limiting_length="255" never_null="true" id="6"/>
+		<primary_key field_name="ID" field_uuid="97205C53CA04456BB7F61FD8B58605C2"/>
+		<table_extra output_form="Form1">
+			<editor_table_info displayable_fields_count="6">
+				<color red="255" green="255" blue="255" alpha="0"/>
+				<coordinates left="626.93408203125" top="70.233932495117" width="120" height="167.33203125"/>
+			</editor_table_info>
+		</table_extra>
+	</table>
+	<relation uuid="9AF5418BC3D34DFE97B9298D48630224" name_Nto1="worksFor" name_1toN="employees" auto_load_Nto1="false" auto_load_1toN="false" foreign_key="false" state="1">
+		<related_field kind="source">
+			<field_ref uuid="48BEA82CAE0742BDB3B55B476D97BC48" name="companyID">
+				<table_ref uuid="956263DEA0B14B5798C10CE492CD8874" name="People"/>
+			</field_ref>
+		</related_field>
+		<related_field kind="destination">
+			<field_ref uuid="97205C53CA04456BB7F61FD8B58605C2" name="ID">
+				<table_ref uuid="CC2E277C6A8F440C85DF8FFDF0C39210" name="Company"/>
+			</field_ref>
+		</related_field>
+		<relation_extra entry_wildchar="false" entry_create="false" choice_field="0" entry_autofill="false">
+			<editor_relation_info via_point_x="-1" via_point_y="-1" prefers_left="false" smartlink="true">
+				<color red="255" green="255" blue="255" alpha="0"/>
+			</editor_relation_info>
+		</relation_extra>
+	</relation>
+	<index kind="regular" unique_keys="true" uuid="2C89FA98A5154FBD84847B57A375E6FE" type="7">
+		<field_ref uuid="FF2FCA7F712E44B39AC199EA8D20EB47" name="ID">
+			<table_ref uuid="956263DEA0B14B5798C10CE492CD8874" name="People"/>
+		</field_ref>
+	</index>
+	<index kind="regular" unique_keys="true" uuid="AFBA5F17542F4BBC88B780F891176033" type="7">
+		<field_ref uuid="97205C53CA04456BB7F61FD8B58605C2" name="ID">
+			<table_ref uuid="CC2E277C6A8F440C85DF8FFDF0C39210" name="Company"/>
+		</field_ref>
+	</index>
+	<index kind="regular" unique_keys="true" uuid="D3C3B140466F4104BE1ED1A87047F33E" type="7">
+		<field_ref uuid="CF01C76D9B944C3282BEF752A9145C75" name="ID">
+			<table_ref uuid="5FFB6E4662E84076BB60B2CCF062C87D" name="Documents"/>
+		</field_ref>
+	</index>
+	<index kind="regular" unique_keys="true" uuid="E78C0A66B9424C2CB9E9B261EA9CDB17" type="7">
+		<field_ref uuid="D7AB1689D6B34AC1B51F977CFAF41E47" name="ID">
+			<table_ref uuid="26C4DA58B2ED432FA2796100B8AEA603" name="Templates"/>
+		</field_ref>
+	</index>
+	<base_extra __stringCompHash="icu:68.1.0" __keywordBuildingHash="icu:68.1.0" package_name="HDI_4DWP_ExportDocx" structure_file_name="HowDoI" data_file_path=":HowDoI.4DD">
+		<journal_file journal_file_enabled="false"/>
+	</base_extra>
+</base>
